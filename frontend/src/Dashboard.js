@@ -187,50 +187,86 @@ const Dashboard = () => {
   ];
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Dashboard</h1>
+  <div style={{ padding: '20px' }}>
+    <h1>Dashboard</h1>
 
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: '20px',
+      }}
+    >
       {/* Products per Category */}
-      <div style={{ marginBottom: '50px' }}>
+      <div
+        style={{
+          border: '1px solid #ddd',
+          borderRadius: '10px',
+          padding: '10px',
+          background: '#fff',
+        }}
+      >
         <Chart
           options={productsPerCategoryOptions}
           series={productsPerCategorySeries}
           type="bar"
-          height={400}
+          height={350}
         />
       </div>
 
       {/* Top Reviewed Products */}
-      <div style={{ marginBottom: '50px' }}>
+      <div
+        style={{
+          border: '1px solid #ddd',
+          borderRadius: '10px',
+          padding: '10px',
+          background: '#fff',
+        }}
+      >
         <Chart
           options={topReviewedProductsOptions}
           series={topReviewedProductsSeries}
           type="bar"
-          height={400}
+          height={350}
         />
       </div>
 
       {/* Discount Distribution */}
-      <div style={{ marginBottom: '50px' }}>
+      <div
+        style={{
+          border: '1px solid #ddd',
+          borderRadius: '10px',
+          padding: '10px',
+          background: '#fff',
+        }}
+      >
         <Chart
           options={discountDistributionOptions}
           series={discountDistributionSeries}
           type="bar"
-          height={400}
+          height={350}
         />
       </div>
 
       {/* Category-wise Average Rating */}
-      <div style={{ marginBottom: '50px' }}>
+      <div
+        style={{
+          border: '1px solid #ddd',
+          borderRadius: '10px',
+          padding: '10px',
+          background: '#fff',
+        }}
+      >
         <Chart
           options={categoryAverageRatingOptions}
           series={categoryAverageRatingSeries}
           type="bar"
-          height={400}
+          height={350}
         />
       </div>
     </div>
-  );
+  </div>
+);
 };
 
 export default Dashboard;
